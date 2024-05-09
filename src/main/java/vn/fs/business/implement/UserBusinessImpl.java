@@ -263,7 +263,7 @@ public class UserBusinessImpl implements UserBusiness {
 	public void sendToken(String email, String token) {
 		String title = "Reset mật khẩu";
         String body = "<h2>Hãy nhấp vào link để thay đổi mật khẩu của bạn</h2>"
-                    + "<a href=\"http://localhost:8080/forgot-password/" + token + "\">Đổi mật khẩu</a>";
+                    + "<a href=\"http://ec2-18-212-28-141.compute-1.amazonaws.com:8080/forgot-password/" + token + "\">Đổi mật khẩu</a>";
         sendMailService.queue(email, title, body);
 		
 	}
